@@ -14,17 +14,16 @@ type ResourceOperationFunctions = {
     [operation: string]: (
       ef: IExecuteFunctions,
       itemIndex: number
-    ) => Promise<any>
+    ) => Promise<unknown>
   }
 }
 
 export const bridgeRequest = async (
   ef: IExecuteFunctions | ILoadOptionsFunctions,
   path: string,
-  body: any
+  body: Record<string, unknown>
 ) => {
   try {
-    console.log("Sending request to Uptime Kuma API:", path, body)
     const credentials = await ef.getCredentials("uptimeKumaApi")
 
     if (!credentials) {

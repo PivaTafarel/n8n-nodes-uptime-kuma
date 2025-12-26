@@ -1,4 +1,5 @@
 import type {
+  IDataObject,
   IExecuteFunctions,
   ILoadOptionsFunctions,
   INodeExecutionData,
@@ -51,7 +52,7 @@ export class UptimeKuma implements INodeType {
 
         return [
           { name: "No Group", value: "" },
-          ...response.map((group: any) => ({
+          ...(response as Array<{ name: string; id: string | number }>).map((group) => ({
             name: group.name,
             value: group.id,
           })),
@@ -100,7 +101,7 @@ export class UptimeKuma implements INodeType {
         const responseData = await fn(this, itemIndex)
 
         if (nResults.includes(resource + "--" + operation)) {
-          responseData.forEach((item: any) => {
+          (responseData as IDataObject[]).forEach((item) => {
             returnData.push({
               json: item,
               pairedItem: { item: itemIndex },
@@ -108,7 +109,7 @@ export class UptimeKuma implements INodeType {
           })
         } else {
           returnData.push({
-            json: responseData,
+            json: responseData as IDataObject,
             pairedItem: { item: itemIndex },
           })
         }

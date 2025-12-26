@@ -112,7 +112,7 @@ export const monitorFields: INodeProperties[] = [
     },
   },
   {
-    displayName: "Resend Notification if Down X times consecutively",
+    displayName: 'Resend Notification if Down X Times Consecutively',
     name: "resendInterval",
     type: "number",
     default: 0,
@@ -130,12 +130,14 @@ export const monitorFields: INodeProperties[] = [
     name: "expiryNotification",
     type: "boolean",
     default: false,
+    description: "Whether to enable certificate expiry notification",
   },
   {
-    displayName: "Ignore TLS/SSL errors for HTTPS websites",
+    displayName: 'Ignore TLS/SSL Errors for HTTPS Websites',
     name: "ignoreTls",
     type: "boolean",
     default: false,
+    description: "Whether to ignore TLS/SSL errors for HTTPS websites",
     displayOptions: {
       show: {
         resource: ["monitor-api"],
@@ -145,11 +147,11 @@ export const monitorFields: INodeProperties[] = [
     },
   },
   {
-    displayName: "Add the 'uptime_kuma_cachebuster' parameter",
+    displayName: 'Add the \'Uptime_kuma_cachebuster\' Parameter',
     name: "cacheBust",
     type: "boolean",
     default: false,
-    description: "Randomly generated parameter to skip caches.",
+    description: 'Whether to add a randomly generated parameter to skip caches',
     displayOptions: {
       show: {
         resource: ["monitor-api"],
@@ -164,7 +166,7 @@ export const monitorFields: INodeProperties[] = [
     type: "boolean",
     default: false,
     description:
-      "Flip the status upside down. If the service is reachable, it is DOWN.",
+      "Whether to flip the status upside down. If the service is reachable, it is DOWN.",
     displayOptions: {
       show: {
         resource: ["monitor-api"],
@@ -192,8 +194,7 @@ export const monitorFields: INodeProperties[] = [
     name: "accepted_statuscodes",
     type: "string",
     default: "200-299",
-    description:
-      "Select status codes which are considered as a successful response.",
+    description: 'Select status codes which are considered as a successful response',
     displayOptions: {
       show: {
         resource: ["monitor-api"],
@@ -207,8 +208,7 @@ export const monitorFields: INodeProperties[] = [
     name: "ipFamily",
     type: "options",
     default: "",
-    description:
-      "Uses the Happy Eyeballs algorithm for determining the IP family.",
+    description: 'Uses the Happy Eyeballs algorithm for determining the IP family',
     options: [
       { name: "Auto Select", value: "" },
       { name: "IPv4", value: "ipv4" },
@@ -223,11 +223,11 @@ export const monitorFields: INodeProperties[] = [
     },
   },
   {
-    displayName: "Monitor Group",
+    displayName: 'Monitor Group Name or ID',
     name: "parent",
     type: "options",
+				description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>',
     default: "",
-    required: false,
     typeOptions: {
       loadOptionsMethod: "getMonitorGroups",
     },

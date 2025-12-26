@@ -2,7 +2,7 @@ import type { IExecuteFunctions } from "n8n-workflow"
 import { bridgeRequest } from "../index"
 
 export function buildMonitorPayload(ef: IExecuteFunctions, itemIndex: number) {
-  const monitorData: any = {}
+  const monitorData: Record<string, unknown> = {}
 
   const id = ef.getNodeParameter("id", itemIndex, 0) as number
 

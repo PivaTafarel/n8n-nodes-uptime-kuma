@@ -1,9 +1,28 @@
-import type { ICredentialType, INodeProperties } from "n8n-workflow"
+import type { 
+  IAuthenticateGeneric,
+  ICredentialTestRequest,
+  ICredentialType, 
+  INodeProperties 
+} from "n8n-workflow"
 
-export class UptimeKuma implements ICredentialType {
+export class UptimeKumaApi implements ICredentialType {
   name = "uptimeKumaApi"
 
   displayName = "Uptime Kuma API"
+  documentationUrl = 'https://github.com/louislam/uptime-kuma/wiki';
+  icon = 'file:uptime-kuma.svg' as const;
+  
+  authenticate: IAuthenticateGeneric = {
+    type: 'generic',
+    properties: {},
+  };
+
+  test: ICredentialTestRequest = {
+    request: {
+      method: 'GET',
+      url: '={{$credentials.bridgeUrl}}/health',
+    },
+  };
 
   properties: INodeProperties[] = [
     {
