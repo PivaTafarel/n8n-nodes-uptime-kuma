@@ -1,8 +1,10 @@
 {
   "name": "n8n-nodes-uptime-kuma",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An n8n node for Uptime Kuma",
-  "keywords": ["n8n-community-node-package"],
+  "keywords": [
+    "n8n-community-node-package"
+  ],
   "homepage": "https://github.com/PivaTafarel/n8n-nodes-uptime-kuma#readme",
   "bugs": {
     "url": "https://github.com/PivaTafarel/n8n-nodes-uptime-kuma/issues"
@@ -17,7 +19,9 @@
   },
   "type": "commonjs",
   "main": "index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "n8n-node build",
     "build:watch": "tsc --watch",
@@ -27,7 +31,9 @@
     "release": "n8n-node release",
     "prepublishOnly": "n8n-node prerelease"
   },
-  "dependencies": { "ws": "^8.18.3" },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
   "devDependencies": {
     "@n8n/node-cli": "*",
     "@types/ws": "^8.18.1",
@@ -37,11 +43,17 @@
     "typescript": "5.9.2",
     "ws": "^8.18.3"
   },
-  "peerDependencies": { "n8n-workflow": "*" },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
   "n8n": {
     "n8nNodesApiVersion": 1,
     "strict": true,
-    "credentials": ["dist/credentials/UptimeKumaApi.credentials.js"],
-    "nodes": ["dist/nodes/UptimeKuma/UptimeKuma.node.js"]
+    "credentials": [
+      "dist/credentials/UptimeKumaApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/UptimeKuma/UptimeKuma.node.js"
+    ]
   }
 }
