@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-uptime-kuma",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An n8n node for Uptime Kuma",
   "keywords": [
     "n8n-community-node-package"
