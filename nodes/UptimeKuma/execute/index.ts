@@ -8,6 +8,8 @@ import { addMonitor } from "./monitor/addMonitor"
 import { deleteMonitor } from "./monitor/deleteMonitor"
 import { editMonitor } from "./monitor/editMonitor"
 import { listMonitors } from "./monitor/listMonitors"
+import { pauseMonitor } from "./monitor/pauseMonitor"
+import { playMonitor } from "./monitor/playMonitor"
 
 type ResourceOperationFunctions = {
   [resource: string]: {
@@ -57,5 +59,7 @@ export const resourceOperationsFunctions: ResourceOperationFunctions = {
     "delete-monitor": deleteMonitor,
     "edit-monitor": editMonitor,
     "list-monitors": listMonitors,
+    "play-monitor": playMonitor,
+    "pause-monitor": pauseMonitor,
   },
 }

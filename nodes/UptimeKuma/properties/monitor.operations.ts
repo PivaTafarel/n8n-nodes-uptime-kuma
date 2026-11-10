@@ -21,13 +21,6 @@ export const monitorOperationsOptions: INodeProperties = {
       value: "add-monitor",
     },
     {
-      // Edit Monitor
-      name: "Edit Monitor",
-      action: "Edit an existing monitor",
-      description: "Edit an existing Monitor",
-      value: "edit-monitor",
-    },
-    {
       // Delete Monitor
       name: "Delete Monitor",
       action: "Delete an existing monitor",
@@ -35,11 +28,30 @@ export const monitorOperationsOptions: INodeProperties = {
       value: "delete-monitor",
     },
     {
+      // Edit Monitor
+      name: "Edit Monitor",
+      action: "Edit an existing monitor",
+      description: "Edit an existing Monitor",
+      value: "edit-monitor",
+    },
+    {
       // List Monitors
       name: "List Monitors",
       action: "List all monitors",
       description: "List all Monitors",
       value: "list-monitors",
+    },
+    {
+      name: "Pause Monitor",
+      action: "Pause an active monitor",
+      description: "Pause monitoring for an existing monitor",
+      value: "pause-monitor",
+    },
+    {
+      name: "Play Monitor",
+      action: "Resume a paused monitor",
+      description: "Resume monitoring for an existing monitor",
+      value: "play-monitor",
     },
   ],
 
