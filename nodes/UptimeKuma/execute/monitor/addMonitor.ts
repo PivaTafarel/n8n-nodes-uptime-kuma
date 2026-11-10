@@ -40,8 +40,8 @@ export function buildMonitorPayload(ef: IExecuteFunctions, itemIndex: number) {
     itemIndex,
     false
   ) as boolean
-  monitorData.domainNameExpiryNotification = ef.getNodeParameter(
-    "domainNameExpiryNotification",
+  monitorData.domainExpiryNotification = ef.getNodeParameter(
+    "domainExpiryNotification",
     itemIndex,
     false
   ) as boolean

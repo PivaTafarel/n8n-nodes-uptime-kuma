@@ -134,7 +134,7 @@ export const monitorFields: INodeProperties[] = [
   },
   {
     displayName: "Domain Name Expiry Notification",
-    name: "domainNameExpiryNotification",
+    name: "domainExpiryNotification",
     type: "boolean",
     default: false,
     description: "Whether to enable domain name expiry notification",
