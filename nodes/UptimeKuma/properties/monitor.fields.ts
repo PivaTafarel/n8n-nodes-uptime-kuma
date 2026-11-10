@@ -11,7 +11,7 @@ export const monitorFields: INodeProperties[] = [
     displayOptions: {
       show: {
         resource: ["monitor-api"],
-        operation: ["edit-monitor", "delete-monitor"],
+        operation: ["edit-monitor", "delete-monitor", "play-monitor", "pause-monitor"],
       },
     },
   },
@@ -131,6 +131,13 @@ export const monitorFields: INodeProperties[] = [
     type: "boolean",
     default: false,
     description: "Whether to enable certificate expiry notification",
+  },
+  {
+    displayName: "Domain Name Expiry Notification",
+    name: "domainNameExpiryNotification",
+    type: "boolean",
+    default: false,
+    description: "Whether to enable domain name expiry notification",
   },
   {
     displayName: 'Ignore TLS/SSL Errors for HTTPS Websites',
